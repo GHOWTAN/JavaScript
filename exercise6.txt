@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta chatset="utf-8"/>
+	<title> adds up the numbers from start to end</title>
+</head>
+<body>
+	<script>
+	var start, end , sum, mid;
+	sum = 0;
+
+	start = Number(prompt("Imput a number as the start of the numbers"));
+	end = Number(prompt("Input a number as the end of the numbers"));
+	mid = start;
+
+	document.write(start);
+	while(mid <= end)
+	{
+		sum =sum + mid;
+
+		if (mid != start)
+			document.write("+"+mid);
+		mid = mid + 1;
+
+	}
+	document.write("="+sum);
+
+
+
+
+
+	</script>
+</body>
+
+
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta chatset="utf-8"/>
+<title>asks a positive integer and calculates its factorial</title>
+</head>
+<body>
+<script>
+var start, sum = 1,mid;
+start = Number(prompt("Imput a number as the start of the integer"));
+mid = 1 ;
+document.write(1);
+while(mid < start)
+{
+mid = mid + 1;
+
+sum =sum*mid;
+document.write(" * "+mid);
+}
+document.write(" = "+sum);
+
+
+
+
+
+</script>
+</body>
+
+
+</html>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>power of x</title>
+<style>
+body
+{
+   margin-left: 20px;
+}
+h1
+{
+   color:orange;
+}
+table, th, td 
+{
+   border: 1px solid black;
+}
+td, th {
+   padding-right:20px;
+   padding-left:20px;
+}
+th {
+   background-color: silver;
+}
+</style>
+</head>
+
+<body>
+
+<h1>power of x</h1>
+
+<p>
+
+<script>
+var x;
+document.write("<table><tr><th>x</th><th>x<sup>2</sup></th><th>x<sup>3</sup></th></tr>");
+x = 0;
+while(x<=8)
+{
+document.write("<tr><td>" + x + "</td><td>" + Math.pow(x,2) + "</td><td>" + Math.pow(x,3) +"</td></tr>");
+x = x + 2;
+}
+document.write("</table>");
+</script>
+</body>
+</html>
+
+

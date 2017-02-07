@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+
+   <head>
+      <meta charset="UTF-8" />
+      <title>The area of a circle</title>
+   </head>
+
+   <body>
+      <h1>The area of a circle</h1>
+      <script>
+          /* This program calculates the area 
+             of a circle. */
+          var height, area ,base;
+		  base = Number(prompt("What is the base?", "1"));
+          height = Number(prompt("What is the height?", "1"));
+          area = base * height*1/2;   //the formula of the area
+		  document.write("The base is " + area.toFixed(2))
+          document.write("The area is " + area.toFixed(2));
+      </script>
+   </body>
+
+</html>
+
+
+
+
+
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<meta charset="utf-8" />
+<title> Write an application that reads three numbers and prints their average</title>
+
+</head>
+
+<body>
+
+<h1>reads three numbers and prints their average</h1>
+
+<script>
+
+//This program calculates the average of three numbers 
+
+	var sum, num1, num2, num3;
+	num1 = Number(prompt("1. number"));
+	num2 = Number(prompt("2. number"));
+	num3 = Number(prompt("3. number"));
+	sum = num1 + num2 + num3;
+	document.write("Result: " + num1 + " + " + num2 + " + " + num3 + " + = " + sum);
+	document.write("Result: " +(num1 + num2 + num3)*1/3 )
+</script>
+
+</body>
+</html>

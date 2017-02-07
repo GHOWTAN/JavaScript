@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="uft-8"/>
+<title>rock, scissors, paper</title>
+
+</head>
+
+<body>
+<script>
+
+var playerChoice, computerChoice;
+
+playerChoice = Number(prompt("1)rock, 2)scissors or 3)paper?"));
+computerChoice = Math.floor(Math.random() * 3) + 1;
+
+if (playerChoice == 1)
+ {
+
+if (computerChoice == 1) 
+{
+
+document.write("Tie!");
+
+}
+ else if (computerChoice == 2) 
+{
+
+document.write("You win!");
+
+} 
+else if (computerChoice == 3)
+ {
+
+document.write("Computer wins!");
+}
+
+} 
+else if (playerChoice == 2) 
+{
+
+if (computerChoice == 1) 
+{
+
+document.write("Computer wins!");
+
+} 
+else if (computerChoice == 2) 
+{
+
+document.write("Tie!");
+
+} 
+else if (computerChoice == 3)
+ {
+
+document.write("You win!");
+}
+
+} 
+else if (playerChoice == 3)
+ {
+
+if (computerChoice == 1)
+ {
+
+document.write("You win!");
+
+} 
+else if (computerChoice == 2)
+ {
+
+document.write("Computer wins!");
+
+} 
+else if (computerChoice == 3)
+ {
+
+document.write("Tie!");
+}
+}
+
+
+document.write("<br />");
+
+
+if (playerChoice == 1) 
+{
+
+document.write("Player: rock");
+
+} 
+else if (playerChoice == 2)
+ {
+
+document.write("Player: scissors");
+
+} 
+else if (playerChoice == 3) 
+{
+
+document.write("Player: paper");
+}
+
+document.write("<br />");
+
+if (computerChoice == 1)
+ {
+
+document.write("Computer: rock");
+
+} 
+else if (computerChoice == 2)
+ {
+
+document.write("Computer: scissors");
+
+} 
+else if (computerChoice == 3)
+ {
+
+document.write("Computer: paper");
+}
+
+</script>
+
+</body>
+
+</html>

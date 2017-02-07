@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>exercise 8.1</title>
+</head>
+<body>
+<script>
+var n, m;
+var w = 1;
+var h = 1; 
+n= Number(prompt("width = "));
+m= Number(prompt("height = "));
+
+
+
+while(h <= m)
+{
+h = h + 1;
+
+for(w = 1; w <= n; w = w+1  )
+{
+document.write("*");
+}
+document.write("<br>");
+}
+
+</script>
+</body>
+
+
+
+</html>
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>exercise8.2</title>
+<style>
+body
+{
+   margin-left: 20px;
+}
+h1
+{
+   color:orange;
+}
+table, th, td 
+{
+   border: 1px solid black;
+}
+td, th {
+   padding-right:20px;
+   padding-left:20px;
+}
+th {
+   background-color: silver;
+}
+</style>
+</head>
+
+<body>
+<h1>temperatures T displays in the table
+</h1>
+<script>
+var a , T;
+a = Number(prompt("imput the quality of a raw material between 0 and 5"));
+var x = 6;
+var y = 1.2;
+T = Math.abs(a*xr*xr*yr*yr+(6-xr)*(6-xr)+(1-a)*xr/yr);
+var xr = 1;
+var yr = 0.2;
+document.write("<table><tr><th>x</th><th>y=0.2</th><th>y=0.4</th><th>y=0.6</th><th>y=0.8</th><th>y=1</th><th>y=1.2</th>");
+while(a<0 || a>5)
+{
+a = Number(prompt("imput the quality of a raw material between 0 and 5"));
+}
+while(xr <= x)
+{
+
+document.write("<tr><td>"+xr+"</td>");
+for(yr = 0.2 ; yr <= y ; yr = yr+0.2 )
+{
+T = Math.abs(a*xr*xr*yr*yr+(6-xr)*(6-xr)+(1-a)*xr/yr);
+document.write("<td>"+T.toFixed(2)+"</td>");
+
+}
+
+
+xr = xr + 1;
+}
+document.write("</table>");
+
+
+</script>
+</body>
+</html>

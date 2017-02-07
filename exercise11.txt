@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+</head>
+
+<body>
+<script>
+
+
+var widths = [];
+var heights = []; 
+var count = 0;
+var num1, num2, i; 
+
+num1 = Number(prompt("Enter a widths (0 indicates the end of numbers)", "0"));
+num2 = Number(prompt("Enter a heights (0 indicates the end of numbers)", "0"));
+while(num1 != 0 || num2 !=0)
+{
+	widths[count] = num1;
+	heights[count] = num2;
+	count = count + 1;
+	num1 = Number(prompt("Enter a widths (0 indicates the end of numbers)", "0"));
+	num2 = Number(prompt("Enter a heights (0 indicates the end of numbers)", "0"));
+}
+
+
+
+document.write("<br>lists each of the rectangles printing its width, its height, and its area. ");
+for(i=0; i<count; i=i+1)
+{
+	document.write("<br>" + i + ":  " + "width" + widths[i] + ", height" + heights[i] + ", area" + widths[i]*heights[i] );
+}
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>EXERCISE 11.2</title>
+
+<script>
+
+var products = ["choice:","Apple iPhone 6 Plus 16GB", "Apple iPhone 4S 8GB", "Apple iPhone 5s 32GB", 
+"Doro Liberto 810", "Huawei Honor 7", "LG Neon 4G", "LG G45", 
+"Microsoft Lumia 535", "Microsoft Lumia 640", "Nokia 108", "Samsung Galaxy J5", 
+"Samsung Galaxy S5 Neo SM-G903F 16GB", "Samsung Galaxy S6 32GB", "Sony Xperia M4 Aqua"];
+var prices = [0,799, 250, 600, 249, 399, 129, 349, 98, 139, 25, 195, 395, 599, 269];
+var amounts = [0,122, 322, 411, 322, 124, 234, 234, 12, 24, 245, 234, 342, 324, 2523];
+function makeOptions()
+{
+	var i;
+	for(i = 0; i < products.length; i++)
+	{
+		document.write("<option>" + products[i] + "</option>");
+	}
+}
+
+
+function display()
+{
+	var index;
+	index = document.getElementById("sel").selectedIndex;
+	if (index > 0)
+	{
+		document.getElementById("result").innerHTML = products[index] + ": the price is " + prices[index] + "; the amounts of it are " + amounts[index];
+	}
+	else 
+	{
+	    document.getElementById("result").innerHTML = ""; 
+	}
+}
+
+function search()
+{
+var output = "";
+var min , max;
+min = document.getElementById("min").value;
+max = document.getElementById("max").value;
+for(i = 0; i < prices.length; i++)
+{
+if (prices[i]>min && prices[i]<max)
+{
+output = output + products[i] + " : " +prices[i] + "<br>";
+}
+document.getElementById("put").innerHTML = output;
+}
+}
+</script>
+</head>
+
+<body>
+
+<h1>products</h1>
+
+<select id="sel" onchange="display()">
+	<script>
+		makeOptions();
+	</script>
+</select>
+<p id="result"></p>
+<p>
+min<input id="min" type="text"><br>
+max<input id="max" type="text"><br>
+<input type="button" value="search" onclick="search()">
+<p id ="put">Prices between max and min</p>
+
+</body>
+</html>

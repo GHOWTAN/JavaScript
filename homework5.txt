@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>High Score</title>
+	<script>
+	var score1, score2, name1, name2;
+	score1 = 0;
+	score2 = 0;
+	name1 = "player1";
+	name2 = "player2";
+	function checkScore() 
+	{
+		var inputScore, inputName, highScoreOutputParagraph;
+		inputScore = Number(document.getElementById("coolscore").value);
+		inputName = document.getElementById("name").value;
+		highScoreOutputParagraph = document.getElementById("highScoreOutput");
+		if (inputScore > score1) {
+			score2 = score1;
+			name2 = name1;
+			score1 = inputScore;
+			name1 = inputName;
+		} else if (inputScore > score2) {
+			score2 = inputScore;
+			name2 = inputName;
+		}
+		highScoreOutput.innerHTML = "1. " + name1 + " " + score1 + " points<br>" + "2. " + name2 + " " + score2 + " points"
+	}
+	</script>
+</head>
+<body>
+	<h2>Hish Score</h2>
+	<p>
+		Name:<input id="name" type="text">
+		New score:<input id="coolscore" type="text" onkeypress="if (event.keyCode == 13) checkScore()">
+		<input type="button" value="insert" onClick="checkScore()">
+	</p>
+	<p>High Scores:</p>
+	<p id="highScoreOutput"></p>
+</body>
+</html>

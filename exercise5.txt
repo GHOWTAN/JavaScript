@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<title>Sum of numbers</title>
+</head>
+
+<body>
+
+<h1>while example: the sum of many numbers</h1>
+
+
+<script>
+
+	var sum = 0;   //the sum of the numbers, initialized as zero
+	var num;       //the number
+    var count = 0;
+	
+	num = Number(prompt("Enter a number (0 indicates the end of numbers)", "0"));  //prompt and read the first number
+	while(num != 0)               //while the number entered is not 0
+	{
+		sum = sum + num;      //add the number to the sum
+		count = count +1; // count++
+		document.write(num + "<br>");
+		num = Number(prompt("Enter a number (0 indicates the end of numbers)", "0")); //prompt the next number
+	}
+	document.write("The sum is " + sum + "<br/>");
+    document.write("The count is "+ count+ "<br/>")
+	document.write("The average is "+ sum/count+ "<br/>")
+</script>
+
+</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<title>Sum of numbers</title>
+</head>
+
+<body>
+
+<h1>it asks numbers as long as the sum is less than 100</h1>
+
+
+<script>
+
+	var sum = 0;   
+	var num;       
+    
+	
+
+	while(sum<100)           
+	{
+		
+		
+		num = Number(prompt("Enter a number ,sum is now"+ sum));  
+		sum = sum + num;   
+		document.write(num + "<br>");
+	
+	}
+	document.write("The final sum is" + sum);
+    
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="uft-8">
+	<title>displays a countdown</title>
+
+</head>
+<body>
+	<script>
+
+	var integer;
+	integer = Number(prompt("Enter a number","0"));
+
+	while(integer != 0)
+	{
+		document.write(integer + "<br>");
+		integer = integer - 1;
+	}
+	document.write("0");
+
+
+	</script>	
+</body>
+
+
+</html>

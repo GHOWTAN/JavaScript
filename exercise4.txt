@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="uft-8"/>
+		<title>a card game that the user plays against the computer</title>
+
+	</head>
+
+	<body>
+		<script>
+
+			var playernum1, playernum2, computernum1, computernum2, playersum,computersum;
+
+			playernum1 = Math.floor(Math.random() * 13) + 1;
+			playernum2 = Math.floor(Math.random() * 13) + 1;
+			computernum1 = Math.floor(Math.random() * 13) + 1;
+			computernum2 = Math.floor(Math.random() * 13) + 1;
+			playersum = playernum1 + playernum2;
+			computersum = computernum1 + computernum2; 
+
+			if ((playersum>21 && computersum>21) || playersum==computersum)
+			{
+				document.write("it's a tie");
+			}
+			else if( playersum>21 || (computersum<=21 && playersum<computersum))
+			{
+				document.write("you lose");
+			}
+			else if(computersum>21 || (playersum<=21 && playersum>computersum))
+			{
+				document.write("you win");
+			}
+
+			document.write("<br />player" + playernum1+"+"+playernum2+"="+playersum);
+			document.write("<br />computer" + computernum1+"+"+computernum2+"="+computersum);
+
+		</script>
+		<br /><a href="exercise4.1.html">New game</a>
+		
+	</body>
+
+</html>
+
+
+
+
+
+
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+	<meta charset="utf-8"/>
+	<title>card deck</title>
+
+</head>
+<body>
+
+
+
+
+	<script>
+
+
+
+		var suit, card, suits, cards;
+
+		suit = Math.floor(Math.random()*4) + 1;
+		card = Math.floor(Math.random()*13) + 1;
+		switch(suit) {
+			case 1:
+			suits = "spades";
+			break;
+			case 2:
+			suits = "hearts";
+			break;
+			case 3:
+			suits = "diamonds";
+			break;
+			case 4:
+			suits = "clubs";
+			break;
+
+			}
+
+		switch(card) {
+			case 1:
+			cards = "ace";
+			break;
+			case 11:
+			cards = "jack";
+			break;
+			case 12:
+			cards = "queen";
+			break;
+			case 13:
+			cards = "king";
+			break;
+            default:
+            cards = card
+			}
+
+
+		document.write(cards+" of "+suits)
+	</script>
+
+
+
+
+</body>
+
+
+
+
+</html>

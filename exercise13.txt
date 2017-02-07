@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>exercise13.1</title>
+        <script>
+            
+           
+        function inputname(){
+            
+           var name=document.getElementById("name").value.toUpperCase();
+		   
+            if (inpName.substring(0,1)== "A" or inpName.substring(0,1)== "B" or inpName.substring(0,1)=='C' ) {
+                document.getElementById("updata").innerHTML=inpName + "is in the Wolffintie 30";
+                
+            }
+            else if(inpName.substring(0,1)=='F' or inpName.substring(0,1)=='L'){
+                 document.getElementById("updata").innerHTML=inpName + "is in the  Technobothnia";
+            }
+            else if (inpName.substring(0,1)=='Y') {
+                document.getElementById("updata").innerHTML=inpName + "is in the  Yrkesakademi";
+            }
+            else{
+                document.getElementById("updata").innerHTML="error message";
+            }
+        }
+        </script>
+ 
+</head>
+
+<body>
+    <p>
+        input a room of VAMK
+    </p>
+    <input type="text" id="name">
+    <input type="button" value="search" onclick="inputname()">
+    
+<p id="updata"></p>
+
+
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>exercise 13.2</title>
+    <script>
+       
+        function checkEmail()
+        {
+            var index, indexDot;
+             var email=document.getElementById("mail").value;
+            index = email.indexOf("@");
+            indexDot= email.indexOf(".");
+            if (email.length<6 || index== -1 || indexDot==-1) {
+                document.getElementById("change").innerHTML="email address is not valid";
+                
+            }
+            else if (index==0 || index== email.length-1) {
+                document.getElementById("change").innerHTML="email address is not valid";
+            }
+            else{
+                document.getElementById("change").innerHTML=email;
+            }
+        }
+    </script>
+    
+</head>
+
+<body>
+<h1>
+    check the email address
+</h1>
+<input type="text" id="mail">
+<input type="button" value="insert" onclick="checkEmail()">
+<p id="change"></p>
+
+
+</body>
+</html>

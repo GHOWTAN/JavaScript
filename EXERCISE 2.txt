@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<meta charset="utf-8" />
+<title> calculates the length c of the third side</title>
+
+</head>
+
+<body>
+
+<h1>calculates the length c of the third side</h1>
+
+<script>
+
+//This program calculates the length c of the third side 
+
+	var sum, a, b, D;
+	a = Number(prompt("1. length"));
+	b = Number(prompt("2. length"));
+	D = Number(prompt("3. angle"));
+	c = Math.sqrt(Math.pow(a,2) + Math.pow(b,2) - 2*a*b*Math.cos(D*Math.PI*1/180))
+	document.write("Result: " + c  )
+</script>
+
+</body>
+</html>
+
+
+
+
+
+<head>
+<meta charset="utf-8" />
+<title> calculates the deposit growth</title>
+
+</head>
+
+<body>
+
+<h1>calculates the deposit growth</h1>
+
+<script>
+
+//This program calculates the deposit growth
+
+	var sum, S, P, N;
+	S = Number(prompt("1. initial deposit"));
+	P = Number(prompt("2. annual interest rate"));
+	N = Number(prompt("3. number of years"));
+	D= S*Math.pow(1+P/100, N)
+
+	document.write("Result: " + D )
+</script>
+
+</body>
+</html>
+
+
+

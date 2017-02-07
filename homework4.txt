@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>homtwork4</title>
+<style>
+body
+{
+   margin-left: 20px;
+}
+h1
+{
+   color:black;
+}
+table, th, td 
+{
+   border: 1px solid black;
+}
+td, th {
+   padding-right:20px;
+   padding-left:20px;
+}
+th {
+   background-color: write;
+}
+</style>
+</head>
+
+<body>
+<p>The price of the correspinding new car:25000€</p>
+
+
+<h1>Price of used car</h1>
+
+<script>
+
+var y,x ;
+y = Math.pow(0.97, tp+1)*Math.pow(0.96, sp)*x;
+x = Number(prompt("input the price of the corresponding new car"));
+var t=10;
+var tp=1;
+var s=10;
+var sp=2;
+
+document.write("<table><tr><th>year</th><th>20000Km</th><th>40000Km</th><th>60000Km</th><th>80000Km</th><th>100000Km</th>");
+
+while(tp <= t)
+{
+document.write("<tr><td>"+tp+"</td>");
+for(sp = 2 ; sp <= s ; sp = sp + 2 )
+{
+y = Math.pow(0.97, tp+1)*Math.pow(0.96, sp)*x
+document.write("<td>"+y.toFixed(0)+"</td>");
+
+}
+document.write("</tr>");
+tp = tp + 1;
+}
+document.write("</table>");
+</script>
+</body>
+</html>
+
+

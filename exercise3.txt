@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<meta charset="utf-8" />
+
+<title>calculate the volume of a cylinder or a cuboid</title>
+</head>
+
+<body>
+
+<h1>calculate the volume of a cylinder or a cuboid</h1>
+
+<script>
+      option = Number(prompt("Choose the volume of 1)A cylinder, or 2) A cuboid "))
+
+
+	var radius, height, length, width, Height;
+	
+	if (option == 1)
+	{
+	radius = Number(prompt("radius"));
+	height = Number(prompt("height"));
+	v = Math.PI * radius * radius * height;
+	
+	   document.write("The volume of the cylinder is " +v);
+	   document.write("<img src='cylinder.png'>");
+	}
+	else if (option == 2)
+	{
+	length = Number(prompt("length"));
+	width = Number(prompt("width"));
+	Height = Number(prompt("Height"));
+	v = length * width * Height
+	
+	   document.write("result "+ v);
+	   document.write("<img src='cuboid.png'>");
+	}
+	
+	
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<meta charset="utf-8" />
+<title> calculates the total price of an order </title>
+</head>
+<body>
+<h1> calculates the total price of an order</h1>
+<script>
+var P,Q;
+P=Number(prompt("price of a product?"));
+Q=Number(prompt("quantity?"));
+p=P*Q;
+A=P*Q*9/10;
+B=P*Q&8/10;
+C=P*Q*7/10;
+if(Q<20)
+{
+document.write(p)
+}
+if(Q>=20&&Q<50)
+{
+document.write(A)
+}
+if(Q>=50&&Q<100)
+{
+document.write(B)
+}
+if(Q>=100)
+{
+document.write(C)
+}
+
+
+
+
+
+</script>
+</body>
+
+
+
+</html>
+

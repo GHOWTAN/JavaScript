@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>exercise10</title>
+
+<script>
+function gcd(a,b)
+{
+var r;
+if (a<b)
+{
+var k = a;
+a = b;
+b = k;
+}
+r = a%b;
+while(r!=0)
+{
+a = b;
+b = r;
+r = a%b;
+}
+return b;
+}
+
+function reduce()
+{
+var numerator, denominator, d;
+numerator = Number(document.getElementById("num").value);
+denominator = Number(document.getElementById("denom").value);
+d = gcd(numerator, denominator);
+numerator = numerator/d;
+denominator = denominator/d;
+document.getElementById("result").innerHTML = "Result is" + numerator + "/" + denominator;
+}
+</script>
+</head>
+<body>
+<p>
+Give a fraction
+</p>
+Numerator:<input type="text" id="num">
+Denominator:<input type="text" id="denom">
+<input type="button" value="Reduce" onclick="reduce ()">
+
+<p id="result"></p>
+</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>a function</title>
+<script>
+ var a,c,d;
+  a = Number(prompt("guess a number"));
+  d = Math.floor(Math.random()*100)+1;
+
+  for (c = 0 ; c < 6 ; c= c+1)
+  {
+    if (a < d)
+    {
+      document.write( "<br>" + "too small");
+    }
+    else if (a > d)
+    {
+      document.write( "<br>" + "too big");
+    }
+    else if (a = d)
+    {
+      document.write( "<br>" + "right number");
+      
+    }
+    a = Number(prompt("guess a number"));
+  
+  }
+  document.write(d);
+</script>
+</head>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>exercise12.1</title>
+    <style type="text/css">
+        canvas{
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        function draw(){
+            var canvas = document.getElementById("mycanvas");
+            var context = canvas.getContext("2d");
+            var x = document.getElementById("x").value;
+            var y = document.getElementById("y").value;
+            var r = document.getElementById("r").value;
+            if(document.getElementById("black").checked){
+                context.fillStyle = "black";
+            }
+            else if(document.getElementById("red").checked) {
+                context.fillStyle = "red";
+            }
+            else if(document.getElementById("blue").checked) {
+                context.fillStyle = "blue";
+            }
+            context.arc(x, y, r, 0, 2*Math.PI);
+            context.stroke();
+            context.fill();
+            
+        }
+    </script>
+</head>
+
+<body>
+<canvas id="mycanvas"> width="500" heigth="300"></canvas>
+<br>
+x<input type="text" id="x">
+y<input type="text" id="y">
+r<input type="text" id="r">
+<br>
+color:<input type="radio" id="black" name="colorgroup" value="black" checked>Black</input>
+<input type="radio" id="red" name="colorgroup" value="red" >Red</input>
+<input type="radio" id="blue" name="colorgroup" value="blue" >Blue</input>
+<p>
+<input type="button" value="insert" onclick="draw()"
+
+
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>14.2</title>
+    <style type="text/css">
+    canvas{
+        border: 1px solid black;
+    }
+    </style>
+    <script>
+    function show()
+    {
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+
+        var M = document.getElementById("message").value;
+        var red = Math.floor(Math.random()*256);
+        var green = Math.floor(Math.random()*256);
+        var blue = Math.floor(Math.random()*256);
+        ctx.font = "30px Arial";
+        ctx.fillStyle = "rgb("+red+","+green+","+blue+")";
+        ctx.fillText(M,10,50);
+        red = Math.floor(Math.random()*256);
+        green = Math.floor(Math.random()*256);
+        blue = Math.floor(Math.random()*256);
+        ctx.font = "32px Arial";
+        ctx.fillStyle = "rgb("+red+","+green+","+blue+")";
+        ctx.fillText(M,50,1000);
+        red = Math.floor(Math.random()*256);
+        green = Math.floor(Math.random()*256);
+        blue = Math.floor(Math.random()*256);
+        ctx.font = "34px Arial";
+        ctx.fillStyle = "rgb("+red+","+green+","+blue+")";
+        ctx.fillText(M,100,150);
+        red = Math.floor(Math.random()*256);
+        green = Math.floor(Math.random()*256);
+        blue = Math.floor(Math.random()*256);
+        ctx.font = "36px Arial";
+        ctx.fillStyle = "rgb("+red+","+green+","+blue+")";
+        ctx.fillText(M,150,200);
+        red = Math.floor(Math.random()*256);
+        green = Math.floor(Math.random()*256);
+        blue = Math.floor(Math.random()*256);
+        ctx.font = "38px Arial";
+        ctx.fillStyle = "rgb("+red+","+green+","+blue+")";
+        ctx.fillText(M,200,250);
+        red = Math.floor(Math.random()*256);
+        green = Math.floor(Math.random()*256);
+        blue = Math.floor(Math.random()*256);
+        ctx.font = "40px Arial";
+        ctx.fillStyle = "rgb("+red+","+green+","+blue+")";
+        ctx.fillText(M,250,300);
+        red = Math.floor(Math.random()*256);
+        green = Math.floor(Math.random()*256);
+        blue = Math.floor(Math.random()*256);red = Math.floor(Math.random()*256);
+        green = Math.floor(Math.random()*256);
+        blue = Math.floor(Math.random()*256);
+        ctx.font = "42px Arial";
+        ctx.fillStyle = "rgb("+red+","+green+","+blue+")";
+        ctx.fillText(M,300,350);
+        red = Math.floor(Math.random()*256);
+        green = Math.floor(Math.random()*256);
+        blue = Math.floor(Math.random()*256);
+        ctx.font = "44px Arial";
+        ctx.fillStyle = "rgb("+red+","+green+","+blue+")";
+        ctx.fillText(M,350,400);
+        red = Math.floor(Math.random()*256);
+        green = Math.floor(Math.random()*256);
+        blue = Math.floor(Math.random()*256);
+        ctx.font = "46px Arial";
+        ctx.fillStyle = "rgb("+red+","+green+","+blue+")";
+        ctx.fillText(M,400,450);
+        red = Math.floor(Math.random()*256);
+        green = Math.floor(Math.random()*256);
+        blue = Math.floor(Math.random()*256);
+        ctx.font = "48px Arial";
+        ctx.fillStyle = "rgb("+red+","+green+","+blue+")";
+        ctx.fillText(M,450,500);
+    }
+
+
+    </script>
+</head>
+
+<body>
+    Message:<input type="text" id="message">
+    <input type="button" value="show" onclick="show()">
+    <br>
+    <canvas id="myCanvas" width="800" height="800"></canvas>
+
+</body>
+</html>
+

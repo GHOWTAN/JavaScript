@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<head><title>the values</title>
+	</head>
+
+	<body>
+
+		<h1>the values</h1>
+
+		<script>
+		var num;
+		num= Number(prompt("Enter a number",""));
+		while(num<=10||num>=20)
+		{num= Number(prompt("Enter a number",""));}
+	    document.write("the num is" +num);
+	    
+</script>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<head><title>the values</title>
+	</head>
+
+	<body>
+
+		<h1>the counts of odd and even numbers</h1>
+
+		<script>
+		var num1, num2, count1, count2;
+		num2 = Number(prompt("how many numbers you want to enter?", ""));
+		count1 =0;
+		count2 =0;
+	
+		for(var i = 1; i<=num2; i++)
+		{num1 = Number(prompt("enter a number?", ""));
+			if (num1 % 2==0)
+			{
+				count1++;
+			}
+	    else if (num1 % 2!=0)
+	    {count2++;
+	     }
+	 	}
+
+	    document.write("The counts of even number  " + count1);
+	    document.write("The counts of odd number  " + count2);
+
+	    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<head><title>the values</title>
+	</head>
+
+	<body>
+
+		<h1>the counts of  heads and tails</h1>
+
+		<script>
+		var num1 ,num2, count1, count2;
+		num1 = Number(prompt("how many times you want to flips?", ""));
+		num2= Math.round(Math.random());
+		count1=0;
+		count2=0;
+
+	
+        for(var i = 1; i<=num1; i++)
+			{num2= Math.round(Math.random());
+				if (num2==0)
+			{
+				count1++;
+			}
+	    else if (num2==1)
+	    {count2++;
+	     }
+	 	}
+	 	document.write("The counts of heads  " + count1);
+        document.write("The counts of heads  " + count2);
+	    document.write("The percentages of heads  " + count1/num1);
+	    document.write("The percentages of tails  " + count2/num1);
+
+	    </script>
+
+</body>
+</html>
